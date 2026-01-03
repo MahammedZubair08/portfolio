@@ -1,0 +1,89 @@
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.hero-content {
+    margin-top: -50px;
+    padding-top: 100px;
+    /* Add space for navbar */
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        margin-top: 0;
+        padding-top: 120px;
+        /* More space on mobile */
+        text-align: left;
+        /* Keep left alignment but ensure fit */
+    }
+}
+
+.hero-subtitle {
+    color: var(--accent);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    color: var(--text-primary);
+    font-size: clamp(32px, 8vw, 80px);
+    /* Slightly smaller min */
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.hero-tagline {
+    color: var(--text-secondary);
+    font-size: clamp(24px, 5vw, 60px);
+    /* Slightly smaller min */
+    font-weight: 600;
+    line-height: 1.1;
+    margin-top: 10px;
+}
+
+.hero-desc {
+    color: var(--text-secondary);
+    margin-top: 20px;
+    max-width: 540px;
+    font-size: 18px;
+}
+
+.hero-btns {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    /* Stack on very small screens if needed, or keep row but ensure spacing */
+    align-items: flex-start;
+    gap: 20px;
+}
+
+@media (min-width: 480px) {
+    .hero-btns {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}

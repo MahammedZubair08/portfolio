@@ -1,0 +1,68 @@
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contact-overline {
+    color: var(--accent);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-title {
+    font-size: clamp(40px, 5vw, 60px);
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.contact-desc {
+    color: var(--text-secondary);
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-link-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    color: var(--accent);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 14px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-link-item:hover {
+    background-color: var(--accent-tint);
+    transform: translateY(-3px);
+}
+
+.contact-link-item svg {
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    .contact-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-link-item {
+        width: 100%;
+        justify-content: center;
+    }
+}

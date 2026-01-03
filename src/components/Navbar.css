@@ -1,0 +1,116 @@
+.navbar {
+    height: var(--nav-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(10, 25, 47, 0.95);
+    /* Always have some bg for readability */
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    /* Subtle shadow always */
+}
+
+.navbar.scrolled {
+    height: var(--nav-scroll-height);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 50px;
+}
+
+.logo a {
+    color: var(--accent);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu li a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.nav-menu li a:hover {
+    color: var(--accent);
+}
+
+.btn-small {
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 15px;
+}
+
+.btn-small:hover {
+    background-color: var(--accent-tint);
+}
+
+.mobile-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+/* Mobile */
+@media screen and (max-width: 960px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background-color: var(--bg-secondary);
+        transition: var(--transition);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu li {
+        margin: 20px 0;
+    }
+
+    .nav-menu li a {
+        font-size: 1.5rem;
+    }
+
+    .mobile-icon {
+        display: block;
+        z-index: 1000;
+    }
+}

@@ -1,0 +1,44 @@
+.about-section {
+    max-width: 900px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.about-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.about-list li {
+    position: relative;
+    padding-left: 20px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.about-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
